@@ -27,13 +27,15 @@ if ($context == "city"):
         <td>Population</td>
       </tr>
     </thead>
-    <?php foreach ($results as $row): ?>
-      <tr>
-        <td><?= $row['name'] ?></td>
-        <td><?= $row['district'] ?></td>
-        <td><?= $row['population'] ?></td>
-      </tr>
-    <?php endforeach; ?>
+    <tbody>
+      <?php foreach ($results as $row): ?>
+        <tr>
+          <td><?= $row['name'] ?></td>
+          <td><?= $row['district'] ?></td>
+          <td><?= $row['population'] ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
   </table>
 <?php else:
   $stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$query%'");
@@ -44,17 +46,19 @@ if ($context == "city"):
       <tr>
         <td>Name</td>
         <td>Continent</td>
-        <td>Independence Year</td>
+        <td>Independence</td>
         <td>Head of State</td>
       </tr>
     </thead>
-    <?php foreach ($results as $row): ?>
-      <tr>
-        <td><?= $row['name'] ?></td>
-        <td><?= $row['continent'] ?></td>
-        <td><?= $row['independence_year'] ?></td>
-        <td><?= $row['head_of_state'] ?></td>
-      </tr>
-    <?php endforeach; ?>
+    <tbody>
+      <?php foreach ($results as $row): ?>
+        <tr>
+          <td><?= $row['name'] ?></td>
+          <td><?= $row['continent'] ?></td>
+          <td><?= $row['independence_year'] ?></td>
+          <td><?= $row['head_of_state'] ?></td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
   </table>
 <?php endif; ?>

@@ -1,1 +1,104 @@
 /* Add your own styles */
+:root {
+    --main-div-lr-padding: 15%;
+    --main-div-width: calc(100% - ( 2 * var(--main-div-lr-padding)));
+    --default-border-radius: 5px;
+}
+
+body {
+    background-color: #F8FAFC;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 0px;
+}
+
+header {
+    background-color: #4D5467;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0px;
+    padding: 15px 12.5% 15px 12.5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+
+    width: var(--main-div-width);
+    padding: 15px var(--main-div-lr-padding);
+}
+
+#controls label {
+    font-size: 25px;
+}
+
+#controls button {
+    margin-left: 10px;
+}
+
+#country {
+    border-radius: var(--default-border-radius);
+}
+
+#countryLookup {
+    border: 0px;
+    border-radius: var(--default-border-radius);
+    padding: 10px;
+    background-color: #5BAEAB;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#cityLookup {
+    border: 0px;
+    border-radius: var(--default-border-radius);
+    padding: 10px;
+    background-color: #5D92DE;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#result {
+    border-color: black;
+    justify-content: center;
+    color: #424C63;
+}
+
+#result > table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #C6C8DA;
+}
+
+#result > table tr {
+    border: 1px solid #C6C8DA;
+}
+
+#result > table td:not(:first-child):not(:last-child) {
+    border-left: 1px solid #E1E3F0;
+    border-right: 1px solid #E1E3F0;
+}
+
+#result > table > thead tr {
+    background-color: #FFFFFF;
+}
+
+#result > table > thead td {
+    font-weight: bold;
+    text-align: center;
+}
+
+#result > table > tbody tr:nth-child(odd) {
+    background-color: #F0F1F8;
+}
+
+#result > table > tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
